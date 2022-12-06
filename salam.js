@@ -50,7 +50,10 @@ send.onclick=function(){
        mesaj:txt,
        insanAdi:ad.value
    })
-   db.on('value',function(snapshot)
+  
+ 
+} 
+db.on('value',function(snapshot)
    {
       var obyekt=snapshot.val()
       if(obyekt==null||obyekt==undefined){
@@ -62,5 +65,3 @@ send.onclick=function(){
          manitor.append(p)
       }
    })
- 
-}
