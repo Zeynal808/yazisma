@@ -52,7 +52,9 @@ send.onclick=function(){
    })
   
  
-} 
+}
+
+
 db.on('value',function(snapshot)
    {
       var obyekt=snapshot.val()
@@ -61,7 +63,7 @@ db.on('value',function(snapshot)
       }
       else{
          var p= document.createElement('p')
-         p.innerText=`${ad.value}: ${obyekt.mesaj}`
+         p.innerText=`${obyekt.insanAdi}: ${obyekt.mesaj}`
          manitor.append(p)
       }
    })
